@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :details %>
-    <%= f.text_field :details %>
+    <%= f.text_area :details %>
   </div>
 
   <div class="field">
@@ -43,7 +43,7 @@
 
   <div class="field">
     <%= f.label :date %>
-    <%= f.datetime_select :date %>
+    <%= f.date_select :date %>
   </div>
 
   <div class="field">
@@ -78,13 +78,9 @@
 
   <div class="field">
     <%= f.label :additional %>
-    <%= f.text_field :additional %>
+    <%= f.text_area :additional %>
   </div>
 
-  <div class="field">
-    <%= f.label :details %>
-    <%= f.text_field :details %>
-  </div>
 
   <div class="actions">
     <%= f.submit %>

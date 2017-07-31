@@ -10,23 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170728173749) do
+ActiveRecord::Schema.define(version: 20170731225828) do
 
   create_table "bookings", force: :cascade do |t|
-    t.string   "details"
+    t.text     "details"
     t.string   "name"
     t.string   "email"
     t.string   "phone"
     t.string   "company"
     t.string   "event_type"
-    t.datetime "date"
+    t.date     "date"
     t.string   "bar_type"
     t.string   "add_ons"
     t.string   "address"
     t.string   "guests"
     t.time     "start_time"
     t.boolean  "permit"
-    t.string   "additional"
+    t.text     "additional"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
