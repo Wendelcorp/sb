@@ -10,79 +10,79 @@
       </ul>
     </div>
   <% end %>
-
+<div class="row text-center">
   <div class="field">
-    <%= f.label :details %>
+    <%= f.label :details %><br>
     <%= f.text_area :details %>
   </div>
 
   <div class="field">
-    <%= f.label :name %>
+    <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label :email %>
+    <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
 
   <div class="field">
-    <%= f.label :phone %>
+    <%= f.label :phone %><br>
     <%= f.text_field :phone %>
   </div>
 
   <div class="field">
-    <%= f.label :company %>
+    <%= f.label :company %><br>
     <%= f.text_field :company %>
   </div>
 
   <div class="field">
-    <%= f.label :event_type %>
-    <%= f.text_field :event_type %>
+    <%= f.label :event_type %><br>
+    <%= f.select :event_type, ['option1', 'option2'] %>
   </div>
 
   <div class="field">
-    <%= f.label :date %>
+    <%= f.label :date %><br>
     <%= f.date_select :date %>
   </div>
 
   <div class="field">
-    <%= f.label :bar_type %>
-    <%= f.text_field :bar_type %>
+    <%= f.label :bar_type %><br>
+    <%= f.select :bar_type, ['option1', 'option2'] %>
   </div>
 
   <div class="field">
-    <%= f.label :add_ons %>
-    <%= f.text_field :add_ons %>
+    <%= f.label :add_ons %><br>
+    <%= f.select :add_ons, ['option1', 'option2'] %>
   </div>
 
   <div class="field">
-    <%= f.label :address %>
+    <%= f.label :address %><br>
     <%= f.text_field :address %>
   </div>
 
   <div class="field">
-    <%= f.label :guests %>
+    <%= f.label :guests %><br>
     <%= f.text_field :guests %>
   </div>
 
   <div class="field">
-    <%= f.label :start_time %>
+    <%= f.label :start_time %><br>
     <%= f.time_select :start_time %>
   </div>
 
   <div class="field">
-    <%= f.label :permit %>
-    <%= f.check_box :permit %>
+    <%= f.label :permit, "Do You Have a Permit?" %><br>
+    <%= f.check_box :permit %> Yes I do
   </div>
 
   <div class="field">
-    <%= f.label :additional %>
+    <%= f.label :additional, "Additional Details" %><br>
     <%= f.text_area :additional %>
   </div>
-
 
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
 <% end %>
