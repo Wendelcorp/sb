@@ -68,14 +68,33 @@ h1 a:hover {
   text-decoration: none;
   color: #FFFFFF;
 }
-
-
+.check-box {
+  display: inline-block;
+}
+.navbar {
+  background: none;
+  border: none;
+}
+.container-fluid {
+    padding: 0;
+}
+.amount-paid {
+  border: 1px solid grey;
+  color: white;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 25px;
+  background: #262626;
+}
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 .login-page {
   width: 360px;
   padding: 8% 0 0;
   margin: auto;
+}
+select {
+  margin: 0 0 15px;
 }
 .form {
   position: relative;

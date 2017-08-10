@@ -64,7 +64,7 @@
       </div>
 
       <div class="field">
-        <%= f.label :guests %><br>
+        <%= f.label :guests, "Number of Guests" %><br>
         <%= f.text_field :guests %>
       </div>
 
@@ -75,7 +75,7 @@
 
       <div class="field">
         <%= f.label :permit, "Do You Have a Permit?" %><br>
-        <%= f.check_box :permit %> Yes I do
+        <div class="col-xs-6 text-right">Yes I do</div><div class="col-xs-6"><%= f.check_box :permit, :class => "check-box" %></div>
       </div>
 
       <div class="field">

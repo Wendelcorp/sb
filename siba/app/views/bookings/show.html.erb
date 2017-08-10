@@ -1,79 +1,84 @@
 <p id="notice"><%= notice %></p>
+<h3 class="bottom-50">Event Overview</h3>
 
-<p>
-  <strong>Details:</strong>
-  <%= @booking.details %>
-</p>
+<div class="row bottom-50">
 
-<p>
-  <strong>Name:</strong>
-  <%= @booking.name %>
-</p>
+  <div class="col-md-6">
+    <p>
+      <strong>Details:</strong><br>
+      <%= @booking.details %>
+    </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @booking.email %>
-</p>
+    <p>
+      <strong>Name:</strong><br>
+      <%= @booking.name %>
+    </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @booking.phone %>
-</p>
+    <p>
+      <strong>Email:</strong><br>
+      <%= @booking.email %>
+    </p>
 
-<p>
-  <strong>Company:</strong>
-  <%= @booking.company %>
-</p>
+    <p>
+      <strong>Phone:</strong><br>
+      <%= @booking.phone %>
+    </p>
 
-<p>
-  <strong>Event type:</strong>
-  <%= @booking.event_type %>
-</p>
+    <p>
+      <strong>Company:</strong><br>
+      <%= @booking.company %>
+    </p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @booking.date %>
-</p>
+    <p>
+      <strong>Event type:</strong><br>
+      <%= @booking.event_type %>
+    </p>
 
-<p>
-  <strong>Bar type:</strong>
-  <%= @booking.bar_type %>
-</p>
+    <p>
+      <strong>Date:</strong><br>
+      <%= @booking.date %>
+    </p>
+  </div>
+  <div class="col-md-6">
+    <p>
+      <strong>Bar type:</strong><br>
+      <%= @booking.bar_type %>
+    </p>
 
-<p>
-  <strong>Add ons:</strong>
-  <%= @booking.add_ons %>
-</p>
+    <p>
+      <strong>Add ons:</strong><br>
+      <%= @booking.add_ons %>
+    </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @booking.address %>
-</p>
+    <p>
+      <strong>Address:</strong><br>
+      <%= @booking.address %>
+    </p>
 
-<p>
-  <strong>Guests:</strong>
-  <%= @booking.guests %>
-</p>
+    <p>
+      <strong>Guests:</strong><br>
+      <%= @booking.guests %>
+    </p>
 
-<p>
-  <strong>Start time:</strong>
-  <%= @booking.start_time %>
-</p>
+    <p>
+      <strong>Start time:</strong><br>
+      <%= @booking.start_time %>
+    </p>
 
-<p>
-  <strong>Permit:</strong>
-  <%= @booking.permit %>
-</p>
+    <p>
+      <strong>Permit:</strong><br>
+      <%= @booking.permit %>
+    </p>
 
-<p>
-  <strong>Additional:</strong>
-  <%= @booking.additional %>
-</p>
-
-<p>
-  <strong>Subtotal:</strong>
-  <%= @booking.subtotal %>
-</p>
+    <p>
+      <strong>Additional:</strong><br>
+      <%= @booking.additional %>
+    </p>
+  </div>
+</div>
+<!-- <h3 class="amount-paid">
+  <strong>Amount Paid:</strong> $<%= @booking.subtotal %>.00
+</h3> -->
 
 <%= link_to 'Edit', edit_booking_path(@booking) %> |
 <%= link_to 'Back', bookings_path %>
