@@ -25,6 +25,8 @@ class BookingsController < ApplicationController
   # POST /bookings.json
   def create
     @booking = Booking.new(booking_params)
+    @booking.subtotal = @booking.calculate(@booking.bar_type, @booking.guests)
+
 
     respond_to do |format|
       if @booking.save
