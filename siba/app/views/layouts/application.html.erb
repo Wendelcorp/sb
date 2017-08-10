@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Siba</title>
+    <title>Spirit</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,7 +10,9 @@
 
   <body>
     <div class="width-control">
-      <h1>SPIRIT</h1>
+      <div class="logo bottom-50">
+      <h1><%= link_to "Spirit", welcome_index_path(@welcome) %></h1>
+      </div>
       <%= yield %>
     </div>
   </body>
