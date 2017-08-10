@@ -10,79 +10,87 @@
       </ul>
     </div>
   <% end %>
-<div class="row text-center">
-  <div class="field">
-    <%= f.label :details %><br>
-    <%= f.text_area :details %>
-  </div>
+  <div class="login-page">
+    <div class="form">
+    <div class="row text-center">
+      <div class="field">
+        <%= f.label :details %><br>
+        <%= f.text_area :details, cols: "40", rows: "10" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
+      <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </div>
 
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
+      <div class="field">
+        <%= f.label :email %><br>
+        <%= f.text_field :email %>
+      </div>
 
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
-  </div>
+      <div class="field">
+        <%= f.label :phone %><br>
+        <%= f.text_field :phone %>
+      </div>
 
-  <div class="field">
-    <%= f.label :company %><br>
-    <%= f.text_field :company %>
-  </div>
+      <div class="field">
+        <%= f.label :company %><br>
+        <%= f.text_field :company %>
+      </div>
 
-  <div class="field">
-    <%= f.label :event_type %><br>
-    <%= f.select :event_type, ['Condo Party', 'Office Social Event', 'Holiday Party', 'Wedding', 'Industry Conference', 'Media Event', 'Birthday Party'] %>
-  </div>
+      <div class="field">
+        <%= f.label :event_type %><br>
+        <%= f.select :event_type, ['Condo Party', 'Office Social Event', 'Holiday Party', 'Wedding', 'Industry Conference', 'Media Event', 'Birthday Party'] %>
+      </div>
 
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
-  </div>
+      <div class="field">
+        <%= f.label :date %><br>
+        <%= f.date_select :date %>
+      </div>
 
-  <div class="field">
-    <%= f.label :bar_type %><br>
-    <%= f.select :bar_type, ['option1', 'option2'] %>
-  </div>
+      <div class="field">
+        <%= f.label :bar_type %><br>
+        <%= f.select :bar_type, ['option1', 'option2'] %>
+      </div>
 
-  <div class="field">
-    <%= f.label :add_ons %><br>
-    <%= f.select :add_ons, ['option1', 'option2'] %>
-  </div>
+      <div class="field">
+        <%= f.label :add_ons %><br>
+        <%= f.select :add_ons, ['option1', 'option2'] %>
+      </div>
 
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
+      <div class="field">
+        <%= f.label :address %><br>
+        <%= f.text_field :address %>
+      </div>
 
-  <div class="field">
-    <%= f.label :guests %><br>
-    <%= f.text_field :guests %>
-  </div>
+      <div class="field">
+        <%= f.label :guests %><br>
+        <%= f.text_field :guests %>
+      </div>
 
-  <div class="field">
-    <%= f.label :start_time %><br>
-    <%= f.time_select :start_time %>
-  </div>
+      <div class="field">
+        <%= f.label :start_time %><br>
+        <%= f.time_select :start_time %>
+      </div>
 
-  <div class="field">
-    <%= f.label :permit, "Do You Have a Permit?" %><br>
-    <%= f.check_box :permit %> Yes I do
-  </div>
+      <div class="field">
+        <%= f.label :permit, "Do You Have a Permit?" %><br>
+        <%= f.check_box :permit %> Yes I do
+      </div>
 
-  <div class="field">
-    <%= f.label :additional, "Additional Details" %><br>
-    <%= f.text_area :additional %>
-  </div>
+      <div class="field">
+        <%= f.label :additional, "Additional Details" %><br>
+        <%= f.text_area :additional, cols: "40", rows: "5" %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit %>
+      <div class="field">
+        <%= f.hidden_field :subtotal, value: 100 %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    </div>
   </div>
 </div>
 <% end %>
