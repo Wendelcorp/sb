@@ -76,9 +76,9 @@
     </p>
   </div>
 </div>
-<h3 class="amount-paid">
-  <strong>Amount Paid:</strong> $<%= @booking.subtotal %>.00
-</h3>
+<h4 class="amount-paid">
+  <strong>Amount Due:</strong> $<%= @booking.subtotal %>.00
+</h4>
 
 <%= link_to 'Edit', edit_booking_path(@booking) %> |
 <%= link_to 'Back', bookings_path %>

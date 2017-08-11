@@ -1,8 +1,8 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
-
   # GET /bookings
   # GET /bookings.json
+
   def index
     @bookings = Booking.all
   end
@@ -43,6 +43,7 @@ class BookingsController < ApplicationController
   # PATCH/PUT /bookings/1.json
   def update
     respond_to do |format|
+
       if @booking.update(booking_params)
         format.html { redirect_to @booking, notice: 'Booking was successfully updated.' }
         format.json { render :show, status: :ok, location: @booking }
