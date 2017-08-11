@@ -1,7 +1,9 @@
 class Booking < ApplicationRecord
-  def calculate(type, number_of_guests)
-    @type = type
-    @guests = number_of_guests.to_i
+  before_save :calculate
+
+  def calculate
+    @type = self.bar_type
+    @guests = self.guests.to_i
     additional_fee = 0
 
     if @type == 'One Feature'
@@ -29,7 +31,7 @@ class Booking < ApplicationRecord
         additional_fee += 15
       end
     end
-    return additional_fee * @guests
+    self.subtotal = additional_fee * @guests
   end
 
 end

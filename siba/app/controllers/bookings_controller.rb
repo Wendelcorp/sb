@@ -19,13 +19,16 @@ class BookingsController < ApplicationController
 
   # GET /bookings/1/edit
   def edit
+
+
   end
 
   # POST /bookings
   # POST /bookings.json
   def create
     @booking = Booking.new(booking_params)
-    @booking.subtotal = @booking.calculate(@booking.bar_type, @booking.guests)
+    type = @booking.bar_type
+    number_of_guests = @booking.guests
 
 
     respond_to do |format|
@@ -69,6 +72,7 @@ class BookingsController < ApplicationController
     def set_booking
       @booking = Booking.find(params[:id])
     end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def booking_params
