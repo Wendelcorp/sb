@@ -14,7 +14,7 @@ class Booking < ApplicationRecord
       elsif (@guests < 199)
         additional_fee += 10
       end
-    elsif @type = "Two Features"
+    elsif @type == "Two Features"
       if (@guests < 50)
         additional_fee += 25
       elsif (@guests >= 50) && (@guests <= 199)
@@ -22,7 +22,7 @@ class Booking < ApplicationRecord
       elsif (@guests < 199)
         additional_fee += 10
       end
-    elsif @type = "Three Features"
+    elsif @type == "Three Features"
       if (@guests < 50)
         additional_fee += 30
       elsif (@guests >= 50) && (@guests <= 199)
