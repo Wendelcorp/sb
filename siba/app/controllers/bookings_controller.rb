@@ -4,7 +4,8 @@ class BookingsController < ApplicationController
   # GET /bookings.json
 
   def index
-    @bookings = Booking.order(:date)
+    @bookings = Booking.all
+    @booking_days = @bookings.group_by { |t| t.date.beginning_of_day}
   end
 
   # GET /bookings/1
@@ -27,6 +28,9 @@ class BookingsController < ApplicationController
   # POST /bookings.json
   def create
     @booking = Booking.new(booking_params)
+    type = @booking.bar_type
+    number_of_guests = @booking.guests
+
 
     respond_to do |format|
       if @booking.save

@@ -32,10 +32,11 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><%= link_to "Bookings", bookings_path(@bookings) %></li>
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Action</a></li>
-                  <li role="separator" class="divider"></li>
+                  <li><%= link_to "Archive", bookings_path(@bookings) %></li>
+                  <li><a href="#">Find a booking</a></li>
                   <li><a href="#">Invite</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><%= link_to 'New Booking', new_booking_path %></li>
                 </ul>
               </li>
             </ul>

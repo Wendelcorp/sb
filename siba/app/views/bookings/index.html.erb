@@ -2,12 +2,16 @@
 
 <h3 class="bottom-50">Scheduled Bookings</h3>
 
+<% @booking_days.keys.sort.each do |day| %>
 <table class="table">
+  <col width="250">
+  <col width="350">
+  <col width="150">
+  <col width="150">
   <thead>
     <tr>
       <th>Name</th>
       <th>Email</th>
-      <th>Date</th>
       <th>Guests</th>
       <th>Start time</th>
 
@@ -16,11 +20,11 @@
   </thead>
 
   <tbody>
-    <% @bookings.each do |booking| %>
+      <h4><strong><%= day.strftime("%B %d, %Y") %></strong></h4>
+      <% for booking in @booking_days[day] %>
       <tr>
         <td><%= booking.name %></td>
         <td><%= booking.email %></td>
-        <td><%= booking.date %></td>
         <td><%= booking.guests %></td>
         <td><%= booking.start_time.to_s(:time) %></td>
 
@@ -30,10 +34,10 @@
         <%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>
-    <% end %>
+      <% end %>
   </tbody>
 </table>
-
+<% end %>
 <br>
 
 <%= link_to 'New Booking', new_booking_path %>
