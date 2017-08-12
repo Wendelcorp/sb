@@ -7,7 +7,6 @@
     <tr>
       <th>Name</th>
       <th>Email</th>
-      <th>Phone</th>
       <th>Date</th>
       <th>Guests</th>
       <th>Start time</th>
@@ -21,10 +20,9 @@
       <tr>
         <td><%= booking.name %></td>
         <td><%= booking.email %></td>
-        <td><%= booking.phone %></td>
         <td><%= booking.date %></td>
         <td><%= booking.guests %></td>
-        <td><%= booking.start_time %></td>
+        <td><%= booking.start_time.to_s(:time) %></td>
 
         <td>
         <%= link_to 'Show', booking %> <br>
