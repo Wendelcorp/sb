@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <h3 class="bottom-50">Scheduled Bookings</h3>
+<p><%= @booking_weeks.first[1].count %> Bookings This Week |
+<%= @booking_months.first[1].count %> Bookings This Month</p> <br>
 
 <% @booking_days.keys.sort.each do |day| %>
 <table class="table">

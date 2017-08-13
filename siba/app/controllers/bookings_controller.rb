@@ -6,6 +6,8 @@ class BookingsController < ApplicationController
   def index
     @bookings = Booking.all
     @booking_days = @bookings.group_by { |t| t.date.beginning_of_day}
+    @booking_weeks = @bookings.group_by { |t| t.date.beginning_of_week}
+    @booking_months = @bookings.group_by { |t| t.date.beginning_of_month}
   end
 
   # GET /bookings/1

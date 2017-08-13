@@ -2,7 +2,6 @@
   <% if booking.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
-
       <ul>
       <% booking.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,6 +9,7 @@
       </ul>
     </div>
   <% end %>
+  <h3 class="subtotal">Subtotal: $<span id="current-price">0</span>.00</h3>
   <div class="login-page">
     <div class="form">
     <div class="row text-center">
