@@ -14,6 +14,7 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Mukta:400,700|Roboto:300,400,700');
 
 h1 a {
   color: black
@@ -29,6 +30,10 @@ h1 a:hover {
 
 .bottom-50 {
   margin-bottom: 50px;
+}
+
+.bottom-25 {
+  margin-bottom: 25px;
 }
 
 .top-50 {
@@ -192,7 +197,52 @@ select {
 }
 body {
   background: white; /* fallback for old browsers */
-  font-family: "Roboto", sans-serif;
+  font-family: 'Mukta', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.logo {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  color: #1C21AD;
+  font-size: 0.8em;
+}
+
+.navbar-default .navbar-nav > li > a {
+  font-weight: 400;
+  color: #1C21AD;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.navbar-default .navbar-nav {
+  margin-top: 20px;
+}
+
+.heading {
+  font-size: 5em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  color: #1C21AD;
+}
+
+.home-illustration {
+  height: 120px;
+  display: block;
+  margin: 0 auto 25px;
+
+}
+.home-illustration-1 {
+  padding: 6px;
+
+}
+.home-illustration-2 {
+  padding: 10px;
+  padding-top: 25px;
+
+}
+.home-illustration-3 {
+  padding: 15px;
+
 }
