@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'confirmation', to: "welcome#thankyou"
 
-  resources :bookings
+  resources :bookings do
+    resources :booking_steps
+  end  
+
   root to: 'welcome#index'
 end

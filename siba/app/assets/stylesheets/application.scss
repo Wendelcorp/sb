@@ -58,13 +58,15 @@ h1 a:hover {
 .primary-button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
+  border-radius: 30px;
   outline: 0;
-  background: #262626;
+  background: #C1E8F8;
   width: 100%;
-  border: 0;
-  padding: 15px;
-  color: #FFFFFF;
+  border: 1.2px solid grey;
+  padding: 12px 50px;
+  color: #1C21AD;
   font-size: 14px;
+  font-weight: bolder;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
@@ -210,7 +212,8 @@ body {
 }
 
 .navbar-default .navbar-nav > li > a {
-  font-weight: 400;
+  font-weight: bolder;
+  letter-spacing: 1px;
   color: #1C21AD;
   font-size: 1em;
   text-transform: uppercase;
@@ -221,10 +224,11 @@ body {
 }
 
 .heading {
-  font-size: 5em;
+  font-size: 6em;
   font-family: 'Roboto', sans-serif;
   font-weight: bolder;
   color: #1C21AD;
+  margin-top: 15%;
 }
 
 .home-illustration {
@@ -245,4 +249,21 @@ body {
 .home-illustration-3 {
   padding: 15px;
 
+}
+.feature-heading {
+  font-size: 1.2em;
+  font-weight: bolder;
+  color: #1C21AD;
+}
+.hero {
+  position: relative;
+  height: 450px;
+}
+.header-icons-left {
+  position: absolute;
+  left: 30px;
+}
+.header-icons-right {
+  position: absolute;
+  right: 30px;
 }
