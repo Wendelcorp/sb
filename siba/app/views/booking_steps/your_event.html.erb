@@ -1,4 +1,8 @@
-<h1>Your Event</h1>
+<div class="row text-center">
+  <h2 class="heading bottom-50">Your Bar.</h2>
+  <h3>What will we be serving?</h3>
+
+</div>
 <%= form_for @booking, url: wizard_path do |f| %>
   <% if @booking.errors.any? %>
     <div id="error_explanation">
@@ -31,6 +35,6 @@
 </div>
 
 <div class="actions">
-  <%= f.submit %>
+  <%= f.submit "Continue", :class => 'button-primary' %>
 </div>
   <% end %>

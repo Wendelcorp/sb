@@ -1,4 +1,8 @@
-<h1>Your Bar</h1>
+<div class="row text-center">
+  <h2 class="heading bottom-50">Your Plan.</h2>
+  <h3>Tell us about your party.</h3>
+
+</div>
 <%= form_for @booking, url: wizard_path do |f| %>
 <% if @booking.errors.any? %>
   <div id="error_explanation">
