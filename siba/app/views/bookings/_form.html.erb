@@ -18,6 +18,18 @@
         <%= f.label :guests, "Number of Guests" %><br>
         <%= f.text_field :guests %>
       </div>
+      <div class="field">
+        <%= f.label :address, "Where it's going down" %><br>
+        <%= f.text_field :address %>
+      </div>
+      <div class="field">
+        <%= f.label :date, "Date" %><br>
+        <%= f.text_field :date %>
+      </div>
+      <div class="field">
+        <%= f.label :start_time %><br>
+        <%= f.time_select :start_time %>
+      </div>
 
       <div class="actions">
         <%= f.submit "Continue" %>
