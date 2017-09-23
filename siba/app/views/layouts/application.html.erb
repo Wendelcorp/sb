@@ -49,5 +49,17 @@
       </nav>
       <%= yield %>
     </div>
+    <footer>
+      <div class="width-control">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1><%= link_to "SIPBAR", welcome_index_path(@welcome), :class => "logo"  %></h1>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a> 
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
