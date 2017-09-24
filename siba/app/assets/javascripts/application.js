@@ -14,7 +14,10 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require formToWizard
+//= require wow
 //= require_tree .
+
+new WOW().init();
 
 $(function() {
     $("#booking-form").formToWizard();
