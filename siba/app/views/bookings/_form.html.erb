@@ -10,31 +10,105 @@
     </div>
   <% end %>
   <h3 class="subtotal">Subtotal: $<span id="current-price">0</span>.00</h3>
-  <div class="login-page">
     <div class="form">
-    <div class="row text-center">
-
-      <div class="field">
-        <%= f.label :guests, "Number of Guests" %><br>
-        <%= f.text_field :guests %>
+      <div class="row text-center">
+        <h2 class="heading bottom-50">Your Event.</h2>
+        <h3>How many people are you expecting?</h3>
+        <p>Base price includes 2 hours of open bar service with setup and bartenders.</p>
       </div>
-      <div class="field">
-        <%= f.label :address, "Where it's going down" %><br>
-        <%= f.text_field :address %>
+    <fieldset>
+      <div class="row text-center">
+        <div class="field">
+          <%= f.label :guests, "Number of Guests" %><br>
+          <%= f.number_field :guests %>
+        </div>
+        <div class="field">
+          <%= f.label :address, "Where it's going down" %><br>
+          <%= f.text_field :address %>
+        </div>
+        <div class="field">
+          <%= f.label :date, "Date" %><br>
+          <%= f.text_field :date %>
+        </div>
+        <div class="field">
+          <%= f.label :start_time %><br>
+          <%= f.time_select :start_time %>
+        </div>
+        <div class="field">
+          <%= f.label :hours, "Number of hours" %><br>
+          <%= f.number_field :hours %>
+        </div>
+        <div class="field">
+          <%= f.label :coupon_code, "Coupon Code?" %><br>
+          <%= f.text_field :coupon_code %> <br>
+          <a href="#">Check Code</a>
+        </div>
       </div>
-      <div class="field">
-        <%= f.label :date, "Date" %><br>
-        <%= f.text_field :date %>
-      </div>
-      <div class="field">
-        <%= f.label :start_time %><br>
-        <%= f.time_select :start_time %>
-      </div>
-
-      <div class="actions">
-        <%= f.submit "Continue" %>
-      </div>
-    </div>
+      <fieldset>
+        <div class="row text-center">
+          <div class="field">
+            <%= f.label :guests, "Number of Guests" %><br>
+            <%= f.number_field :guests %>
+          </div>
+          <div class="field">
+            <%= f.label :beer, "Beer" %><br>
+            <%= f.select :beer, ['Craft Beer Session', 'Special Request (+$5/person)'] %>
+          </div>
+          <div class="field">
+            <%= f.label :wine, "Wine" %><br>
+            <%= f.select :wine, ['Wine Bar', 'Special Request (+$5/person)'] %>
+          </div>
+          <div class="field">
+            <%= f.label :spirit, "Spirits" %><br>
+            <%= f.select :spirit, ['Spirits Bar', 'Special Request (+$5/person)'] %>
+          </div>
+          <div class="field">
+            <%= f.label :cocktail, "Cocktails" %><br>
+            <%= f.select :cocktail, ['Sipbar Selection', 'Special Request (+$5/person)'] %>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div class="row text-center">
+          <div class="field">
+            <%= f.label :event_type, "Type of Party" %><br>
+            <%= f.select :event_type, ['Wedding', 'Office Social', 'House Party'] %>
+          </div>
+          <div class="field">
+            <%= f.label :company, "Your Company (optional)" %><br>
+            <%= f.text_field :company %>
+          </div>
+          <div class="field">
+            <%= f.label :glassware, "Glassware?" %><br>
+            <%= f.check_box :glassware %>
+          </div>
+          <div class="field">
+            <%= f.label :bar_rental, "Bar Rental?" %><br>
+            <%= f.check_box :bar_rental %>
+          </div>
+          <div class="field">
+            <%= f.label :virgin, "Virgin Drinks?" %><br>
+            <%= f.check_box :virgin %>
+          </div>
+          <div class="field">
+            <%= f.label :passed_drinks, "Passed drinks by staff?" %><br>
+            <%= f.check_box :passed_drinks %>
+          </div>
+          <div class="field">
+            <%= f.label :other, "Other requests?" %><br>
+            <%= f.text_area :other %>
+          </div>
+          <div class="field">
+            <%= f.label :delivery_details, "delivery details" %><br>
+            <%= f.text_area :delivery_details, placeholder: "Instructions on how to load-in material, any additional important contact information for the venue etc." %>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+      </fieldset>
+        <div class="actions">
+          <%= f.submit "Continue" %>
+        </div>
+    </fieldset>
   </div>
-</div>
 <% end %>

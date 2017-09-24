@@ -2,8 +2,8 @@
 
 <h3 class="bottom-50">Scheduled Bookings</h3>
 <%= @booking_months.count %> Bookings This Month</p> <br>
+<%= @booking_today.count %> Bookings Today</p> <br>
 
-<% @booking_today.each do |day| %>
 <table class="table">
   <col width="250">
   <col width="350">
@@ -21,8 +21,7 @@
   </thead>
 
   <tbody>
-      <h4><strong><%= day.created_at.try(:strftime, ("%B %e, %Y")) %></strong></h4>
-      <% for booking in @booking_months %>
+      <% @bookings.each do |booking| %>
       <tr>
         <td><%= booking.name %></td>
         <td><%= booking.email %></td>
@@ -38,7 +37,6 @@
       <% end %>
   </tbody>
 </table>
-<% end %>
 <br>
 
 <%= link_to 'New Booking', new_booking_path %>

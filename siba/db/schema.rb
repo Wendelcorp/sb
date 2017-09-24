@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170922141253) do
+ActiveRecord::Schema.define(version: 20170924021500) do
 
   create_table "bookings", force: :cascade do |t|
     t.text     "details"
@@ -27,9 +27,25 @@ ActiveRecord::Schema.define(version: 20170922141253) do
     t.time     "start_time"
     t.boolean  "permit"
     t.text     "additional"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.integer  "subtotal"
+    t.integer  "hours"
+    t.string   "coupon_code"
+    t.string   "beer"
+    t.string   "wine"
+    t.string   "spirit"
+    t.string   "cocktail"
+    t.boolean  "glassware"
+    t.boolean  "bar_rental"
+    t.boolean  "virgin"
+    t.text     "other"
+    t.boolean  "passed_drinks"
+    t.boolean  "beer_corkage"
+    t.boolean  "wine_corkage"
+    t.boolean  "spirit_corkage"
+    t.boolean  "catering"
+    t.text     "delivery_details"
   end
 
   create_table "coupons", force: :cascade do |t|
