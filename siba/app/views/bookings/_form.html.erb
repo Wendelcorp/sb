@@ -11,13 +11,12 @@
   <% end %>
   <h3 class="subtotal">Subtotal: $<span id="current-price">0</span>.00</h3>
     <div class="form" id="booking-form">
+    <fieldset>
+      <legend class="legend-heading">Your Event</legend>
       <div class="row text-center">
-        <h2 class="heading bottom-50">Your Event.</h2>
         <h3>How many people are you expecting?</h3>
         <p>Base price includes 2 hours of open bar service with setup and bartenders.</p>
       </div>
-    <fieldset>
-      <legend>Your Event</legend>
       <div class="row text-center">
         <div class="field">
           <%= f.label :guests, "Number of Guests" %><br>
@@ -47,7 +46,11 @@
       </div>
       </fieldset>
       <fieldset>
-        <legend>Your Bar</legend>
+        <legend class="legend-heading">Your Bar</legend>
+        <div class="row text-center">
+          <h3>How many people are you expecting?</h3>
+          <p>Base price includes 2 hours of open bar service with setup and bartenders.</p>
+        </div>
         <div class="row text-center">
           <div class="field">
             <%= f.label :guests, "Number of Guests" %><br>
@@ -72,7 +75,11 @@
         </div>
       </fieldset>
       <fieldset>
-        <legend>Your Details</legend>
+        <legend class="legend-heading">Your Details</legend>
+        <div class="row text-center">
+          <h3>How many people are you expecting?</h3>
+          <p>Base price includes 2 hours of open bar service with setup and bartenders.</p>
+        </div>
         <div class="row text-center">
           <div class="field">
             <%= f.label :event_type, "Type of Party" %><br>

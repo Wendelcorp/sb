@@ -246,6 +246,13 @@ body {
   color: #1C21AD;
   margin-top: 15%;
 }
+.legend-heading {
+  font-size: 6em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  color: #1C21AD;
+  margin-top: 15%;
+}
 
 .home-illustration {
   height: 120px;
@@ -267,7 +274,7 @@ body {
 
 }
 .feature-heading {
-  font-size: 1.2em;
+  font-size: 1.8em;
   font-weight: bolder;
   color: #1C21AD;
 }
@@ -282,6 +289,10 @@ body {
 .header-icons-right {
   position: absolute;
   right: 30px;
+}
+
+.home-feature {
+  margin-bottom: 70px;
 }
 
 footer {
