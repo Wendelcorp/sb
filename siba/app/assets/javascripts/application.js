@@ -17,6 +17,8 @@
 //= require_tree .
 
 $(function() {
+    $("#booking-form").formToWizard();
+
     var numberOfGuests = 0;
     var pricePerPerson = 0;
     type = $("#booking_bar_type").val();

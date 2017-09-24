@@ -17,6 +17,7 @@
         <p>Base price includes 2 hours of open bar service with setup and bartenders.</p>
       </div>
     <fieldset>
+      <legend>Your Event</legend>
       <div class="row text-center">
         <div class="field">
           <%= f.label :guests, "Number of Guests" %><br>
@@ -44,7 +45,9 @@
           <a href="#">Check Code</a>
         </div>
       </div>
+      </fieldset>
       <fieldset>
+        <legend>Your Bar</legend>
         <div class="row text-center">
           <div class="field">
             <%= f.label :guests, "Number of Guests" %><br>
@@ -69,6 +72,7 @@
         </div>
       </fieldset>
       <fieldset>
+        <legend>Your Details</legend>
         <div class="row text-center">
           <div class="field">
             <%= f.label :event_type, "Type of Party" %><br>
@@ -103,12 +107,9 @@
             <%= f.text_area :delivery_details, placeholder: "Instructions on how to load-in material, any additional important contact information for the venue etc." %>
           </div>
         </div>
-      </fieldset>
-      <fieldset>
-      </fieldset>
         <div class="actions">
           <%= f.submit "Continue" %>
         </div>
-    </fieldset>
+      </fieldset>
   </div>
 <% end %>
