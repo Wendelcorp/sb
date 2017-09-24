@@ -585,6 +585,8 @@ to   { transform: translateY($spacing * -1); }
     position: absolute;
     width: 100%;
     overflow-y: hidden;
+    left: 0;
+    top: 0;
 }
 
 
