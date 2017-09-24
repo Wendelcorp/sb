@@ -1,6 +1,11 @@
 class Booking < ApplicationRecord
   before_save :calculate
 
+  scope :this_month, -> { where(created_at: Time.now.beginning_of_month..Time.now.end_of_month) }
+  scope :today, -> { where(created_at: Time.now.beginning_of_day..Time.now.end_of_day) }
+  scope :paid, -> { where(status: true) }
+  scope :unpaid, -> { where(status: false) }
+
   def calculate
     @type = self.bar_type
     @guests = self.guests.to_i

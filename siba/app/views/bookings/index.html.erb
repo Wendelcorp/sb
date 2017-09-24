@@ -1,10 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h3 class="bottom-50">Scheduled Bookings</h3>
-<p><%= @booking_weeks.first[1].count %> Bookings This Week |
-<%= @booking_months.first[1].count %> Bookings This Month</p> <br>
+<%= @booking_months.count %> Bookings This Month</p> <br>
 
-<% @booking_days.keys.sort.each do |day| %>
+<% @booking_today.each do |day| %>
 <table class="table">
   <col width="250">
   <col width="350">
@@ -22,13 +21,13 @@
   </thead>
 
   <tbody>
-      <h4><strong><%= day.strftime("%B %d, %Y") %></strong></h4>
-      <% for booking in @booking_days[day] %>
+      <h4><strong><%= day.created_at.try(:strftime, ("%B %e, %Y")) %></strong></h4>
+      <% for booking in @booking_months %>
       <tr>
         <td><%= booking.name %></td>
         <td><%= booking.email %></td>
         <td><%= booking.guests %></td>
-        <td><%= booking.start_time.to_s(:time) %></td>
+        <td><%= booking.start_time %></td>
 
         <td>
         <%= link_to 'Show', booking %> <br>
