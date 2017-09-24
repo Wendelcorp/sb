@@ -3,7 +3,6 @@
 
 <h3 class="bottom-50">Scheduled Bookings</h3>
 <%= @booking_months.count %> Bookings This Month</p> <br>
-<%= @booking_today.count %> Bookings Today</p> <br>
 
 <table class="table">
   <col width="250">
@@ -22,7 +21,7 @@
   </thead>
 
   <tbody>
-      <% @bookings.each do |booking| %>
+      <% @booking_months.each do |booking| %>
       <tr>
         <td><%= booking.name %></td>
         <td><%= booking.email %></td>

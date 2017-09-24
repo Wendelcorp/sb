@@ -10,6 +10,11 @@ class BookingsController < ApplicationController
     @booking_today = @bookings.today
   end
 
+  def index_month
+    @bookings = Booking.all
+    @booking_months = @bookings.this_month
+  end
+
   # GET /bookings/1
   # GET /bookings/1.json
   def show
