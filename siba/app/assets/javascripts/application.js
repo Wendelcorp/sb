@@ -15,6 +15,8 @@
 //= require bootstrap-sprockets
 //= require formToWizard
 //= require wow
+//= require typed
+//= require jparallax
 //= require_tree .
 
 new WOW().init();

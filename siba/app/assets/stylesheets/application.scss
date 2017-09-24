@@ -16,19 +16,39 @@
 @import "bootstrap";
 @import "animate";
 @import url('https://fonts.googleapis.com/css?family=Mukta:400,700|Roboto:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Archivo:400,500,700');
+
+/* ===============
+   GLOBAL SETTINGS
+   =============== */
 
 .wow { visibility: hidden; }
 
-h1 a {
-  color: black
+body {
+  overflow-x: hidden;
 }
-h1 a:hover {
-  text-decoration: none;
+
+footer {
+  height: 250px;
+  background-color: #C1E8F8;
+  padding-top: 60px;
+}
+
+.navbar {
+  background: none;
+  border: none;
+}
+.container-fluid {
+    padding: 0;
 }
 
 .width-control {
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.bottom-100 {
+  margin-bottom: 100px;
 }
 
 .bottom-50 {
@@ -43,66 +63,61 @@ h1 a:hover {
   margin-top: 50px;
 }
 
-.hero-img {
-  background-image: url(/images/hero1.jpg);
-  background-size: cover;
-  height: 400px;
+.animatedhover {
+  animation-play-state: paused;
+}
+.animatedhover:hover {
+  animation-play-state: running;
 }
 
-.subtotal {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  color: white;
-  background-color: #262626;
-  padding: 10px 30px;
-}
+/* ===============
+   TYPOGRAPHY
+   =============== */
 
-.primary-button {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  border-radius: 30px;
-  outline: 0;
-  background: #C1E8F8;
-  width: 100%;
-  border: 1.2px solid grey;
-  padding: 12px 50px;
-  color: #1C21AD;
-  font-size: 14px;
-  font-weight: bolder;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
-}
-.primary-button:hover {
-  text-decoration: none;
-  color: #FFFFFF;
-}
-.check-box {
-  display: inline-block;
-}
-.navbar {
-  background: none;
-  border: none;
-}
-.container-fluid {
-    padding: 0;
-}
-.amount-paid {
-  border: 1px solid grey;
-  color: white;
-  height: 50px;
-  line-height: 50px;
-  padding-left: 25px;
-  background: #262626;
-}
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+ h1 a {
+   color: black
+ }
+ h1 a:hover {
+   text-decoration: none;
+ }
 
-.login-page {
-  width: 360px;
-  padding: 8% 0 0;
-  margin: auto;
-}
+ .heading {
+   font-size: 6em;
+   font-family: 'Roboto', sans-serif;
+   font-weight: bolder;
+   color: #1C21AD;
+ }
+ .typed-heading {
+   display: inline-block;
+ }
+ .headline-box {
+   min-height: 130px;
+ }
+
+ #homepage-headline {
+   color: #FFF;
+ }
+ #homepage-subhead {
+   color: #FFF;
+   margin-bottom: 85px;
+ }
+ .legend-heading {
+   font-size: 6em;
+   font-family: 'Roboto', sans-serif;
+   font-weight: bolder;
+   color: #1C21AD;
+ }
+
+ .feature-heading {
+   font-size: 1.8em;
+   font-weight: bolder;
+   color: #1C21AD;
+ }
+
+ /* ===============
+    Form Styles
+    =============== */
+
 select {
   margin: 0 0 15px;
 }
@@ -183,6 +198,113 @@ select {
 .form .register-form {
   display: none;
 }
+
+
+ /* ===============
+    Homepage Hero
+    =============== */
+
+.hero-img {
+  background-image: url(/images/hero1.jpg);
+  background-size: cover;
+  height: 400px;
+}
+
+.heading-container {
+  min-height: 130px;
+}
+.hero {
+  min-height: calc(100vh - 90px);
+  width: 100vw;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding-bottom: 90px;
+}
+.primary-button-hero {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  border-radius: 30px;
+  outline: 0;
+  background: none;
+  border: 2px solid #FFF;
+  padding: 12px 50px;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: bolder;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  display: table;
+  margin: 0 auto;
+}
+.primary-button-hero:hover {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.hero-illustration {
+  height: 130px;
+  display: block;
+  margin: 0 auto 25px;
+}
+
+/* ===============
+   Other
+   =============== */
+
+.logo-parade {
+  max-width: 100%;
+}
+.subtotal {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  background-color: #262626;
+  padding: 10px 30px;
+}
+.primary-button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  border-radius: 30px;
+  outline: 0;
+  background: #C1E8F8;
+  border: 1.2px solid grey;
+  padding: 12px 50px;
+  color: #1C21AD;
+  font-size: 14px;
+  font-weight: bolder;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  display: table;
+  margin: 0 auto;
+}
+.primary-button:hover {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.check-box {
+  display: inline-block;
+}
+
+.amount-paid {
+  border: 1px solid grey;
+  color: white;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 25px;
+  background: #262626;
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
 .container {
   position: relative;
   z-index: 1;
@@ -224,7 +346,7 @@ body {
 }
 
 .logo {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Archivo', sans-serif;
   font-weight: bolder;
   color: #1C21AD;
   font-size: 0.8em;
@@ -247,14 +369,32 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: bolder;
   color: #1C21AD;
-  margin-top: 15%;
+}
+.typed-heading {
+  display: inline-block;
+}
+.headline-box {
+  min-height: 130px;
+}
+
+#homepage-headline {
+  color: #FFF;
+}
+#homepage-subhead {
+  color: #FFF;
+  margin-bottom: 85px;
+}
+.feature-heading {
+
+}
+.typed-cursor {
+
 }
 .legend-heading {
   font-size: 6em;
   font-family: 'Roboto', sans-serif;
   font-weight: bolder;
   color: #1C21AD;
-  margin-top: 15%;
 }
 
 .home-illustration {
@@ -281,9 +421,16 @@ body {
   font-weight: bolder;
   color: #1C21AD;
 }
+.heading-container {
+  min-height: 130px;
+}
 .hero {
-  position: relative;
-  height: 450px;
+  min-height: calc(100vh - 90px);
+  width: 100vw;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding-bottom: 90px;
 }
 .header-icons-left {
   position: absolute;
@@ -304,6 +451,141 @@ footer {
   padding-top: 60px;
 }
 
+.background-icons-layer {}
+.background-icons-container {}
+
+
+
+/* Fizzy Background */
+
+
+$color-bg: #1C21AD;
+$color-particle: #fff;
+$spacing: 2560px;
+$time-1: 60s;
+$time-2: 120s;
+$time-3: 180s;
+$time-4: 600s;
+
+
+
+/* Pauls awesome mixin */
+@function particles($max) {
+ $val: 0px 0px $color-particle;
+ @for $i from 1 through $max {
+    $val: #{$val},
+    random($spacing)+px random($spacing)+px $color-particle;
+ }
+ @return $val;
+}
+
+@mixin particles($max) {
+ box-shadow: particles($max);
+}
+
+/* Styles */
+
+// .page-bg,
+// .animation-wrapper {
+// position: fixed;
+// top: 0;
+// left: 0;
+// width: 100%;
+// height: 100%;
+// }
+
+.page-bg {
+background: $color-bg;
+}
+
+.particle,
+.particle:after {
+background: transparent;
+}
+
+.particle:after {
+position: absolute;
+content: "";
+top: $spacing;
+}
+
+.particle-1 {
+animation: animParticle $time-1 linear infinite;
+
+@include particles(600);
+height: 1px;
+width: 1px;
+}
+
+.particle-1:after {
+
+@include particles(600);
+height: 1px;
+width: 1px;
+}
+
+.particle-2 {
+animation: animParticle $time-2 linear infinite;
+
+@include particles(200);
+height: 2px;
+width: 2px;
+}
+
+.particle-2:after {
+
+@include particles(200);
+height: 2px;
+width: 2px;
+}
+
+.particle-3 {
+animation: animParticle $time-3 linear infinite;
+
+@include particles(100);
+height: 3px;
+width: 3px;
+}
+
+.particle-3:after {
+
+@include particles(100);
+height: 3px;
+width: 3px;
+}
+
+.particle-4 {
+animation: animParticle $time-4 linear infinite;
+
+@include particles(400);
+height: 1px;
+width: 1px;
+}
+
+.particle-4:after {
+
+@include particles(400);
+height: 1px;
+width: 1px;
+}
+
+@keyframes animParticle {
+from { transform: translateY(0px); }
+to   { transform: translateY($spacing * -1); }
+}
+
+.page-wrapper {
+  text-align: center;
+  color: #1C21AD;
+  z-index: 2;
+}
+
+.animation-wrapper {
+    min-height: calc(100vh - 90px);
+    position: absolute;
+    width: 100%;
+    overflow-y: hidden;
+}
 
 
 
@@ -311,17 +593,124 @@ footer {
 
 
 
+.mouse {
+  position: absolute;
+  width: 22px;
+  height: 42px;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -12px;
+  border-radius: 15px;
+  border: 2px solid #FFF;
+  -webkit-animation: intro 1s;
+  animation: intro 1s;
+}
+.scroll {
+  display: block;
+  width: 3px;
+  height: 3px;
+  margin: 6px auto;
+  border-radius: 4px;
+  background: #FFF;
+  -webkit-animation: finger 1s infinite;
+  animation: finger 1s infinite;
+}
+@-webkit-keyframes intro {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes intro {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes finger {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+@keyframes finger {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
 
 
 
 
 
 
+/*******************************
+* Bootstrap Accordion
+*******************************/
+.panel-group .panel {
+  border-radius: 30px;
+  box-shadow: none;
+  border: 2px solid #1C21AD;
+
+  margin: 15px 0;
+}
+.panel-default > .panel-heading {
+  padding: 0;
+  border-radius: 20px;
+  color: #1C21AD;
+  background-color: #fff;
+  border-color: #EEEEEE;
+}
+
+.panel-default {
+  overflow: auto;
+}
+
+.panel-title {
+  font-size: 1.2em;
+}
+
+.panel-title > a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.more-less {
+  float: right;
+  color: #212121;
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #EEEEEE;
+}
 
 
 
-
-
+/*******************************
+* Text Align Styles for Bootstrap
+*******************************/
 
 .text-left-not-xs, .text-left-not-sm, .text-left-not-md, .text-left-not-lg {
     text-align: left;
