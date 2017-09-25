@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
   # GET /bookings.json
 
   def index
-    @bookings = Booking.order(sort_column + " " + sort_direction)
+    @bookings = Booking.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 5, :page => params[:page])
     @booking_months = @bookings.this_month
     @booking_today = @bookings.today
   end

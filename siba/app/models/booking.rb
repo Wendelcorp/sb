@@ -6,6 +6,14 @@ class Booking < ApplicationRecord
   scope :paid, -> { where(status: true) }
   scope :unpaid, -> { where(status: false) }
 
+  def self.search(search)
+    if search
+      where('email LIKE ?', "%#{search}%")
+    else
+      all
+    end
+  end
+
   def calculate
     @type = self.bar_type
     @guests = self.guests.to_i

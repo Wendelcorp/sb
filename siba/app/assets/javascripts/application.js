@@ -17,7 +17,6 @@
 //= require wow
 //= require typed
 //= require jparallax
-//= require smart_listing
 //= require_tree .
 
 new WOW().init();
