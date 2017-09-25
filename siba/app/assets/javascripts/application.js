@@ -19,6 +19,7 @@
 //= require jparallax
 //= require jquery-ui/core
 //= require jquery-ui/datepicker
+//= require jquery-ui/slider
 //= require_tree .
 
 new WOW().init();
