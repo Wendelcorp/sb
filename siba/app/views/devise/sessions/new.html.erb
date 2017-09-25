@@ -1,7 +1,7 @@
-<div class="row">
+<div class="row form">
 <div class="col-md-12 text-center">
-  <img style="margin-top:80px; width:200px;" src="/images/ice-cubes.png" alt="">
-<h2>Log in</h2>
+<h2 class="heading bottom-50">Log In</h2>
+  <%= image_tag "computer.svg", class: "login-illustration pulse animated"  %>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">

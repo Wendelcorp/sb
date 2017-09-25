@@ -1,4 +1,5 @@
 class Booking < ApplicationRecord
+  belongs_to :user
   before_save :calculate
 
   scope :this_month, -> { where(created_at: Time.now.beginning_of_month..Time.now.end_of_month) }

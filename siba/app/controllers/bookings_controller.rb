@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
   helper_method :sort_column, :sort_direction
   # before_action :authenticate_user!, :except => [:new, :create, :update]
   # GET /bookings
@@ -23,7 +24,7 @@ class BookingsController < ApplicationController
 
   # GET /bookings/new
   def new
-    @booking = Booking.new
+    @booking = current_user.bookings.build
   end
 
   # GET /bookings/1/edit
@@ -35,7 +36,7 @@ class BookingsController < ApplicationController
   # POST /bookings
   # POST /bookings.json
   def create
-    @booking = Booking.new(booking_params)
+    @booking = current_user.bookings.build(booking_params)
 
     respond_to do |format|
       if @booking.save
@@ -92,7 +93,7 @@ class BookingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def booking_params
-      params.require(:booking).permit(:details, :name, :email, :phone, :company, :event_type, :date, :bar_type, :add_ons, :address, :guests, :start_time, :permit, :additional, :subtotal)
+      params.require(:booking).permit(:details, :name, :email, :phone, :company, :event_type, :date, :bar_type, :add_ons, :address, :guests, :start_time, :permit, :additional, :subtotal, :hours, :coupon_code, :beer, :wine, :spirit, :cocktail, :glassware, :bar_rental, :virgin, :passed_drinks, :other, :delivery_details )
     end
 
     def sort_column

@@ -1,7 +1,7 @@
-<div class="row">
+<div class="row form">
 <div class="col-md-12 text-center">
-  <img style="margin-top:80px; width:200px;" src="/images/ice-cubes.png" alt="">
-<h2>Sign up</h2>
+<h2 class="heading bottom-50">Sign Up</h2>
+<%= image_tag "computer.svg", class: "login-illustration pulse animated"  %>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
