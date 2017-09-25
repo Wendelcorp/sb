@@ -1,11 +1,12 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
+  helper_method :sort_column, :sort_direction
   # before_action :authenticate_user!, :except => [:new, :create, :update]
   # GET /bookings
   # GET /bookings.json
 
   def index
-    @bookings = Booking.all
+    @bookings = Booking.order(sort_column + " " + sort_direction)
     @booking_months = @bookings.this_month
     @booking_today = @bookings.today
   end
@@ -83,4 +84,13 @@ class BookingsController < ApplicationController
     def booking_params
       params.require(:booking).permit(:details, :name, :email, :phone, :company, :event_type, :date, :bar_type, :add_ons, :address, :guests, :start_time, :permit, :additional, :subtotal)
     end
+
+    def sort_column
+      Booking.column_names.include?(params[:sort]) ? params[:sort] : 'name'
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : 'asc'
+    end
+
 end

@@ -5,6 +5,7 @@
 <%= @booking_months.count %> Bookings This Month</p> <br>
 <%= @booking_today.count %> Bookings Today</p> <br>
 
+
 <table class="table">
   <col width="250">
   <col width="350">
@@ -12,10 +13,10 @@
   <col width="150">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Guests</th>
-      <th>Start time</th>
+      <th><%= sortable 'name' %></th>
+      <th><%= sortable 'email' %></th>
+      <th><%= sortable 'guests' %></th>
+      <th><%= sortable 'start' %></th>
 
       <th colspan="3"></th>
     </tr>
@@ -38,6 +39,7 @@
       <% end %>
   </tbody>
 </table>
+
 <br>
 
 <%= link_to 'New Booking', new_booking_path %>
