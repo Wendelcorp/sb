@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'admin', to: 'devise/sessions#new'
   end
- 
+
   get 'welcome/index'
   get 'bookings/index_month' => 'bookings#index_month'
   get 'confirmation', to: "welcome#thankyou"

@@ -17,11 +17,15 @@
 //= require wow
 //= require typed
 //= require jparallax
+//= require jquery-ui/core
+//= require jquery-ui/datepicker
 //= require_tree .
 
 new WOW().init();
 
 $(function() {
+
+
     $("#booking-form").formToWizard();
 
     var numberOfGuests = 0;

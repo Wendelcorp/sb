@@ -9,7 +9,7 @@
       </ul>
     </div>
   <% end %>
-  <h3 class="subtotal">Subtotal: $<span id="current-price">0</span>.00</h3>
+  <h3 class="subtotal">Price Per Person:</br>$<span id="current-price">0</span>.00</h3>
     <div class="form" id="booking-form">
     <fieldset>
       <legend class="legend-heading">Your Event</legend>
@@ -28,7 +28,7 @@
         </div>
         <div class="field">
           <%= f.label :date, "Date" %><br>
-          <%= f.date_select :date %>
+          <%= f.text_field :date, class: "datepicker" %>
         </div>
         <div class="field">
           <%= f.label :start_time %><br>
@@ -40,8 +40,7 @@
         </div>
         <div class="field">
           <%= f.label :coupon_code, "Coupon Code?" %><br>
-          <%= f.text_field :coupon_code %> <br>
-          <a href="#">Check Code</a>
+          <%= f.text_field :coupon_code, :id => 'existing-coupon', :placeholder=>'Coupon Code' %>
         </div>
       </div>
       </fieldset>
@@ -120,3 +119,17 @@
       </fieldset>
   </div>
 <% end %>
+
+<script>
+$(function() {
+  $( ".datepicker" ).datepicker();
+
+  $("#existing-coupon").bind("jqv.field.result", function(event, field, errorFound, prompText){
+  if(errorFound){
+      $(".continue").attr("disabled", false);  // .continue is a button
+  } else{
+      $(".continue").attr("disabled", true);
+  }
+})
+});
+</script>

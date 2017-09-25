@@ -73,6 +73,16 @@ class BookingsController < ApplicationController
     end
   end
 
+  def check_user
+    existing-coupon = params[:fieldValue]
+    existing-coupon = Coupon.where("name = ?", coupon.upcase).first
+    if user.present?
+      render :json =>  ["existing-coupon", true , "Coupon Applied"]
+    else
+      render :json =>  ["existing-coupon", false , "Coupon Not Active"]
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_booking
