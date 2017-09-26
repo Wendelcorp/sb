@@ -37,6 +37,9 @@ footer {
   padding-top: 100px;
 }
 
+legend {
+  border: none;
+}
 .navbar {
   background: none;
   border: none;
@@ -116,6 +119,15 @@ footer {
    font-weight: bolder;
    color: #1C21AD;
  }
+
+.subtotal-price {
+  margin-top: 100px;
+}
+
+th {
+    background-color: #f2f2f2
+}
+.table {}
 
  /* ===============
     Form Styles
@@ -473,6 +485,12 @@ body {
 
 }
 
+
+.check-boxes {
+  width: 400px;
+  margin: 0 auto;
+}
+
 .next, .prev {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -784,6 +802,17 @@ to   { transform: translateY($spacing * -1); }
   border-top-color: #EEEEEE;
 }
 
+
+
+
+/*******************************
+* Mobile
+*******************************/
+@media only screen and (max-width: 1000px) {
+  .crowd {
+    display: none;
+  }
+}
 
 
 /*******************************

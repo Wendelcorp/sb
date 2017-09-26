@@ -52,6 +52,7 @@ class BookingsController < ApplicationController
   # PATCH/PUT /bookings/1
   # PATCH/PUT /bookings/1.json
   def update
+
     respond_to do |format|
 
       if @booking.update(booking_params)
