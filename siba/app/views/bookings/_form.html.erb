@@ -754,20 +754,37 @@
             <%= f.text_field :company %>
           </div>
           <div class="field">
-            <%= f.label :glassware, "Glassware?" %><br>
-            <%= f.check_box :glassware %>
+            <div class="col-md-6 text-right">
+              <%= f.label :glassware, "Glassware?", :class => 'dashboard-tooltip', data: { content: 'We will contact you. Add $300+.', placement: 'top', trigger: 'hover' } %>
+            </div>
+            <div class="col-md-6 text-left">
+              <%= f.check_box :glassware %>
+            </div>
+
           </div>
           <div class="field">
-            <%= f.label :bar_rental, "Bar Rental?" %><br>
+            <div class="col-md-6 text-right">
+            <%= f.label :bar_rental, "Bar Rental?", :class => 'dashboard-tooltip', data: { content: 'Rent a full bar setup. Add $300.', placement: 'top', trigger: 'hover' } %>
+            </div>
+            <div class="col-md-6 text-left">
             <%= f.check_box :bar_rental %>
+            </div>
           </div>
           <div class="field">
-            <%= f.label :virgin, "Virgin Drinks?" %><br>
+            <div class="col-md-6 text-right">
+            <%= f.label :virgin, "Virgin Drinks?", :class => 'dashboard-tooltip', data: { content: 'We will bring soda and fresh water. Add $2/per person.', placement: 'top', trigger: 'hover' } %>
+            </div>
+            <div class="col-md-6 text-left">
             <%= f.check_box :virgin %>
+            </div>
           </div>
-          <div class="field bottom-50">
-            <%= f.label :passed_drinks, "Passed drinks by staff?" %><br>
+          <div class="field">
+            <div class="col-md-6 text-right bottom-50">
+            <%= f.label :passed_drinks, "Passed drinks by staff?", :class => 'dashboard-tooltip', data: { content: 'Here will be a note about this add on.', placement: 'top', trigger: 'hover' }  %>
+            </div>
+            <div class="col-md-6 text-left bottom-50">
             <%= f.check_box :passed_drinks %>
+            </div>
           </div>
         </div>
       </fieldset>
@@ -789,8 +806,12 @@
             <%= f.text_field :email %>
           </div>
           <div class="field">
-            <%= f.label :insurance, "Add Cancellation Insurance?" %><br>
+            <div class="col-md-6 text-right">
+            <%= f.label :insurance, "Add Cancellation Insurance?", :class => 'dashboard-tooltip', data: { content: 'Here will be a note about this add on.', placement: 'top', trigger: 'hover' } %>
+            </div>
+            <div class="col-md-6 text-left">
             <%= f.check_box :insurance %>
+            </div>
           </div>
           <div class="field">
             <%= f.label :other, "Other requests?" %><br>
@@ -895,6 +916,7 @@ $("#slider-range").slider({
     }
 });
 
+$(".dashboard-tooltip").popover()
 
 // Animated Bar
 
