@@ -469,7 +469,70 @@ body {
 .background-icons-layer {}
 .background-icons-container {}
 
+.bar-graphic {
 
+}
+
+.next, .prev {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  border-radius: 30px;
+  outline: 0;
+  background: #C1E8F8;
+  border: 1.2px solid grey;
+  padding: 12px 50px;
+  color: #1C21AD;
+  font-size: 14px;
+  font-weight: bolder;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  margin: 20px;
+}
+
+
+
+.crowd {
+  position: relative;
+  top: -300px;
+  z-index: -1;
+}
+.crowd1l {
+  position: absolute;
+  left:-60%;
+  top:0;
+  width: 250%;
+}
+.crowd1r {
+  position: absolute;
+  right:-60%;
+  top:0;
+  width: 250%;
+}
+.crowd2l {
+  position: absolute;
+  left:-60%;
+  top:0;
+  width: 250%;
+}
+.crowd2r {
+  position: absolute;
+  right:-60%;
+  top:0;
+  width: 250%;
+}
+.crowd3l {
+  position: absolute;
+  left:-60%;
+  top:0;
+  width: 250%;
+}
+.crowd3r {
+  position: absolute;
+  right:-60%;
+  top:0;
+  width: 250%;
+}
 
 /* Fizzy Background */
 
